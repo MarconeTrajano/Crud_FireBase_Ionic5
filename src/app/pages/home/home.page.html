@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>
+      CRUD FIREBASE - IONIC 5
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item-group>
+    <ion-item *ngFor="let data of Data">
+      <ion-label>
+        <ion-icon slot="start" color="secondary" name="radio-button-on-outline"></ion-icon>
+        <strong>
+          {{data.nome}}
+        </strong>
+        <p>
+          {{data.cidade}}
+        </p>
+        <p>
+          {{data.idade}}
+        </p>
+      </ion-label>
+      <ion-icon style="font-size: 30px;" color="warning" (click)="id = data.id;openModalEditPage()" name="cog-outline">
+      </ion-icon>
+      <ion-icon style="margin-left: 10px;" (click)="id = data.id;DeleteAlert()" color="danger" name="trash-outline">
+      </ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openModalAddPage()" color="secondary">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,14 @@
+:host ::ng-deep {
+    .monthview-container {
+        height: auto !important;
+    }
+
+    .event-detail-container {
+        display: none;
+    }
+}
+
+ion-toolbar {
+    font-size: 15px;
+    text-align-last: center;
+}

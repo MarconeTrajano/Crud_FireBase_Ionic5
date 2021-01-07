@@ -1,0 +1,7 @@
+{
+  "name": "CrudFirebase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
